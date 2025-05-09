@@ -10,16 +10,16 @@ class Rating{
   Rating({required this.user , required this.movie , required this.score , required this.comment});
 
   void display_Rating_Info(){
-    print('UserName $user');
-    print('Movie $movie');
-    print('Score $score');
-    print('Comment $comment');
-    print('__________________');
+    print('UserName : $user');
+    print('Movie : $movie');
+    print('Score : $score');
+    print('Comment : $comment');
+    print('--------------------------------------------');;
   }
 
   @override
   String toString(){
-    return 'User : $user \nMovie : $movie \nScore : $score \nComment : $comment';
+    return '$user \nMovie : $movie \nScore : $score \nComment : $comment';
   }
   
 

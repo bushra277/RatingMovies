@@ -3,40 +3,34 @@ import 'Rating.dart';
 
 class User{
   String username;
+  int user_id;
   String email;
-  List<Rating> ratingss = [];
+  static List<Rating> ratings = [];
 
 
-  User({required this.username , required this.email}){
+  User({required this.username , required this.user_id , required this.email}){
 
   }
 
   void display_user_info(){
-    print('UserName $username');
-    print('Email $email');
-    print('__________________');
+    print('UserName : $username');
+    print('User_ID : $user_id');
+    print('Email : $email');
+    print('--------------------------------------------');
   }
 
    @override
   String toString(){
-    return 'User Name : $username \nEmail : $email';
+    return 'User Name : $username \nUser_ID : $user_id \nEmail : $email';
   }
 
   void add_rating(Rating rating){
-    ratingss.add(rating);
-    print('The rate $rating is added');
-    print('__________________');
+    ratings.add(rating);
+    print('The rate is added');
+    print('--------------------------------------------');
 
   }
-
-  void show_my_ratings(){
-    for(var rate in ratingss){
-      print(rate);
-      print('__________________');
-    }
-
-
-  }
+  
 
 }
 
